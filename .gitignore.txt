@@ -1,0 +1,4 @@
+/x64
+DAA-SOURCE-FILES.vcxproj
+DAA-SOURCE-FILES.vcxproj.filters
+DAA-SOURCE-FILES.vcxproj.user
