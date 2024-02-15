@@ -9,6 +9,5 @@ int main() {
     int n, m;
     cin >> n >> m;
     permutation_sum_composite(n, m);
-    cout << "Hello!";
     return 0;
 }
