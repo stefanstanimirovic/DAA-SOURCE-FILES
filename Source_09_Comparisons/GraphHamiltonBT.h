@@ -4,13 +4,13 @@
 #include <list>
 using namespace std;
 
-class GraphHamilton {
+class GraphHamiltonBT {
 private:
     int V; // Broj cvorova
     vector<list<int>> adjList; // Lista susedstva
     vector<int> path; // Hamiltonov put (ukoliko postoji)
 public:
-    GraphHamilton(int);
+    GraphHamiltonBT(int);
     // Konstruktor
     void addEdge(int, int);
     // Dodaj granu u graf

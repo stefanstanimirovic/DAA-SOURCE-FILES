@@ -1,15 +1,15 @@
-#include "GraphHamilton.h"
+#include "GraphHamiltonBT.h"
 
-GraphHamilton::GraphHamilton(int vertices) : V(vertices), adjList(vertices), path(V, -1) {}
+GraphHamiltonBT::GraphHamiltonBT(int vertices) : V(vertices), adjList(vertices), path(V, -1) {}
 
 // Dodaj granu u graf
-void GraphHamilton::addEdge(int v, int w) {
+void GraphHamiltonBT::addEdge(int v, int w) {
     adjList[v].push_back(w);
     adjList[w].push_back(v);
 }
 
 // Rekurzivna pomocna funkcija za proveru Hamiltonovog puta
-bool GraphHamilton::isHamiltonianPathUtil(int v, vector<int>& path, vector<bool>& visited, int& pathIndex) {
+bool GraphHamiltonBT::isHamiltonianPathUtil(int v, vector<int>& path, vector<bool>& visited, int& pathIndex) {
     visited[v] = true;
     path[pathIndex++] = v;
 
@@ -42,7 +42,7 @@ bool GraphHamilton::isHamiltonianPathUtil(int v, vector<int>& path, vector<bool>
 }
 
 // Proveri postojanje Hamiltonovog puta u grafu
-bool GraphHamilton::isHamiltonianPath() {
+bool GraphHamiltonBT::isHamiltonianPath() {
     vector<bool> visited(V, false); // Inicijalizuj niz za pracenje posecenih cvorova
     int pathIndex = 0; // Inicijalizuj indeks puta
 
@@ -58,6 +58,6 @@ bool GraphHamilton::isHamiltonianPath() {
 }
 
 // Dohvatanje Hamiltonovog puta
-vector<int> GraphHamilton::getHamiltonianPath() {
+vector<int> GraphHamiltonBT::getHamiltonianPath() {
     return path;
 }

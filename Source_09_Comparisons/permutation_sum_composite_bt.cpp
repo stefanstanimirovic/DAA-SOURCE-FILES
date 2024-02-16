@@ -3,14 +3,14 @@
 using namespace std;
 
 // Import class GraphHamilton
-#include "GraphHamilton.h"
+#include "GraphHamiltonBT.h"
 
 // Imports from other files
 vector<bool> eratosten(int n);
 
-bool permutation_sum_composite(int n, int m) {
+bool permutation_sum_composite_bt(int n, int m) {
     vector<bool> sito = eratosten(2 * m - 1);
-    GraphHamilton g(m - n + 1);
+    GraphHamiltonBT g(m - n + 1);
     for (int i = n; i <= m - 1; i++) {
         for (int j = i + 1; j <= m; j++) {
             if (sito[i + j] == false) {
