@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 #include <list>
-#include <bitset>
 using namespace std;
 
 class GraphHamiltonDP
