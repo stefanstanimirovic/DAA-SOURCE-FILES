@@ -2,12 +2,17 @@
 using namespace std;
 
 // Imports from other files
-bool permutation_sum_composite_bt(int, int);
+long long exp_s1_ineffective(int n);
+long long exp_s1(int n);
+double exp_s2(int n);
+double exp_s3(int n);
 
 int main() {
-    cout << "Unesite brojeve n i m: ";
-    int n, m;
-    cin >> n >> m;
-    permutation_sum_composite_bt(n, m);
+    //int n;
+    //cin >> n;
+    //cout << exp_s1_ineffective(n);
+    for (int i = 1; i <= 10; i++) {
+        cout << exp_s1_ineffective(i) << " " << exp_s1(i) << " " << exp_s2(i) << " " << exp_s3(i) << endl;
+    }
     return 0;
 }
