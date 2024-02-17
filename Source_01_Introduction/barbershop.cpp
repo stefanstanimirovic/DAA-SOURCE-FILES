@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <vector>
 #include <utility>
 using namespace std;
@@ -27,7 +27,7 @@ vector<pair<int, char>> barber_shop(const vector<double>& prices, const vector<d
 	indices[minIndex] = minIndex;
 	directions[minIndex] = '0';
 	newPrices[minIndex] = prices[minIndex];
-	
+
 	// Posmatramo smer suprotan od kretanja kazaljke na satu
 	// Za svaki grad koji prethodni minIndex gradu u ovom smeru
 	// (indeksi se povecavaju)
