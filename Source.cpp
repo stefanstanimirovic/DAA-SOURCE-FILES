@@ -1,18 +1,28 @@
+#pragma once
 #include <iostream>
+#include <vector>
+#include <utility>
 using namespace std;
 
 // Imports from other files
-long long exp_s1_ineffective(int n);
-long long exp_s1(int n);
-double exp_s2(int n);
-double exp_s3(int n);
+vector<pair<int, char>> barber_shop(const vector<double>& prices, const vector<double>& distances);
 
 int main() {
-    //int n;
-    //cin >> n;
-    //cout << exp_s1_ineffective(n);
-    for (int i = 1; i <= 10; i++) {
-        cout << exp_s1_ineffective(i) << " " << exp_s1(i) << " " << exp_s2(i) << " " << exp_s3(i) << endl;
+    int n;
+    cin >> n;
+    vector<double> prices(n);
+    for (int i = 0; i < n; i++) {
+        cin >> prices[i];
+    }
+    vector<double> distances(n);
+    for (int i = 0; i < n; i++) {
+        cin >> distances[i];
+    }
+
+    // Ispis
+    vector<pair<int, char>> result = barber_shop(prices, distances);
+    for (pair<int, char> p : result) {
+        cout << p.first << " " << p.second << endl;
     }
     return 0;
 }
