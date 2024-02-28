@@ -7,7 +7,7 @@ using namespace std;
 // distances[i] predstavlja cenu puta od grada i do grada (i + 1) % n
 // Izlaz: Vektor parova, gde prva koordinata predstavlja indeks grada
 // gde je najpovoljnije sipati gorivo, a druga koordinata smer kretanja do tog grada
-vector<pair<int, char>> barber_shop(const vector<double>& prices, const vector<double>& distances) {
+vector<pair<int, char>> gas_station(const vector<double>& prices, const vector<double>& distances) {
 	int n = prices.size(); // broj gradova
 	vector<int> indices(n, -1); // niz indeksa gradova
 	vector<char> directions(n, '0'); // niz smerova
