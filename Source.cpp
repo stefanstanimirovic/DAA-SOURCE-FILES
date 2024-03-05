@@ -22,8 +22,8 @@ private:
 using namespace std;
 
 // Imports from other files
-unsigned long long sumAllDivisors1(unsigned long long n);
-unsigned long long sumAllDivisors2(unsigned long long n);
+unsigned long long countAllDivisors1(unsigned long long n);
+unsigned long long countAllDivisors2(unsigned long long n);
 
 int main() {
     /* Seed */
@@ -40,11 +40,11 @@ int main() {
         Timer tmr;
 
         tmr.reset();
-        unsigned long long res1 = sumAllDivisors1(n);
+        unsigned long long res1 = countAllDivisors1(n);
         double time1 = tmr.elapsed();
 
         tmr.reset();
-        unsigned long long res2 = sumAllDivisors2(n);
+        unsigned long long res2 = countAllDivisors2(n);
         double time2 = tmr.elapsed();
         
         cout << n << endl;
