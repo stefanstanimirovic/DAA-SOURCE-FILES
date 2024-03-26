@@ -1,8 +1,4 @@
-static void swap(int& a, int& b) {
-    int temp = a;
-    a = b;
-    b = temp;
-}
+void swap(int& a, int& b);
 
 int partition(int arr[], int low, int high) {
     int pivot = arr[high];
