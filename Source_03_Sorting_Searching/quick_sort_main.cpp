@@ -1,4 +1,3 @@
-// uncomment the code below to run main function
 /*
 #pragma once
 #include <vector>
@@ -6,8 +5,7 @@
 using namespace std;
 
 // Imports from other files
-void printArray(int arr[], int arrSize);
-void mergeSort(int arr[], int arrSize);
+void quickSort(int arr[], int arrSize);
 
 void printArray(int arr[], int arrSize) {
     for (int i = 0; i < arrSize; i++)
@@ -22,7 +20,7 @@ int main() {
     std::cout << "Given array is \n";
     printArray(arr, arrSize);
 
-    mergeSort(arr, arrSize);
+    quickSort(arr, arrSize);
 
     std::cout << "\nSorted array is \n";
     printArray(arr, arrSize);

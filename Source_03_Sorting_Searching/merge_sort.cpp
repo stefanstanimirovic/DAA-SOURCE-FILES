@@ -52,9 +52,3 @@ void mergeSortRec(int arr[], int left, int right) {
 void mergeSort(int arr[], int arrSize) {
     mergeSortRec(arr, 0, arrSize - 1);
 }
-
-void printArray(int arr[], int arrSize) {
-    for (int i = 0; i < arrSize; i++)
-        cout << arr[i] << " ";
-    cout << endl;
-}

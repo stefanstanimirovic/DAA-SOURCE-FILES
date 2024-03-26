@@ -4,8 +4,13 @@
 using namespace std;
 
 // Imports from other files
-void printArray(int arr[], int arrSize);
-void mergeSort(int arr[], int arrSize);
+void quickSort(int arr[], int arrSize);
+
+void printArray(int arr[], int arrSize) {
+    for (int i = 0; i < arrSize; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+}
 
 int main() {
     int arr[] = { 12, 11, 13, 5, 6, 7, 15, 3, 8, 14, 4 };
@@ -14,7 +19,7 @@ int main() {
     std::cout << "Given array is \n";
     printArray(arr, arrSize);
 
-    mergeSort(arr, arrSize);
+    quickSort(arr, arrSize);
 
     std::cout << "\nSorted array is \n";
     printArray(arr, arrSize);
