@@ -1,3 +1,5 @@
+// uncomment the code below to run main function
+/*
 #pragma once
 #include <vector>
 #include <iostream>
@@ -21,3 +23,4 @@ int main() {
 
     return 0;
 }
+*/
