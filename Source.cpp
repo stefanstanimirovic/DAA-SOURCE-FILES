@@ -4,25 +4,17 @@
 using namespace std;
 
 // Imports from other files
-void quickSort(int arr[], int arrSize);
-
-void printArray(int arr[], int arrSize) {
-    for (int i = 0; i < arrSize; i++)
-        cout << arr[i] << " ";
-    cout << endl;
-}
+vector<int> findKClosestElements(int a[], int m, int k, int n);
 
 int main() {
-    int arr[] = { 12, 11, 13, 5, 6, 7, 15, 3, 8, 14, 4 };
-    int arrSize = sizeof(arr) / sizeof(arr[0]);
+    int a[] = {2, 3, 4, 5, 6, 7};
+    int n = sizeof(a) / sizeof(a[0]);
+    int k = 2, m = 8;
 
-    std::cout << "Given array is \n";
-    printArray(arr, arrSize);
-
-    quickSort(arr, arrSize);
-
-    std::cout << "\nSorted array is \n";
-    printArray(arr, arrSize);
+    vector<int> nums = findKClosestElements(a, m, k, n);
+    for (int x : nums) {
+        cout << x << " ";
+    }
 
     return 0;
 }
