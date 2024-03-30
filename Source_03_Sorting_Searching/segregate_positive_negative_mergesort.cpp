@@ -1,7 +1,7 @@
 #include <vector>
 using namespace std;
 
-// Spoji dva podniza, `arr[low… mid]` i `arr[mid+1… high]`,
+// Spoji dva podniza, arr[low..mid] i arr[mid+1..high],
 // tako da su svi negativni brojevi ispred pozitivnih brojeva
 void mergePosNeg(int arr[], int low, int mid, int high) {
     int k = 0;
@@ -52,8 +52,8 @@ void partitionMerge(int arr[], int low, int high)
 
     int mid = low + (high - low) / 2;
 
-    partitionMerge(arr, low, mid);          // split/merge left half
-    partitionMerge(arr, mid + 1, high);     // split/merge right half
+    partitionMerge(arr, low, mid);          // leva particija
+    partitionMerge(arr, mid + 1, high);     // desna particija
 
-    mergePosNeg(arr, low, mid, high);        // join the two half runs
+    mergePosNeg(arr, low, mid, high);        // spoji dve particije
 }
