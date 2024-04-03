@@ -1,26 +1,26 @@
 void swap(int& a, int& b);
 
-int partition(int arr[], int low, int high) {
-    int pivot = arr[high];
-    int i = low - 1;
-    for (int j = low; j < high; j++) {
-        if (arr[j] <= pivot) {
-            i++; 
-            swap(arr[i], arr[j]);
-        }
-    }
-    swap(arr[i + 1], arr[high]);
-    return (i + 1);
+int partition(int arr[], int left, int right) {
+	int pivot = arr[right];
+	int j = left;
+	for (int i = left; i < right; i++) {
+		if (arr[i] <= pivot) {
+			swap(arr[i], arr[j]);
+			j++;
+		}
+	}
+	swap(arr[j], arr[right]);
+	return j;
 }
 
-void quickSortRec(int arr[], int low, int high) {
-    if (low < high) {
-        int p = partition(arr, low, high);
-        quickSortRec(arr, low, p - 1);
-        quickSortRec(arr, p + 1, high);
-    }
+void quickSortRec(int arr[], int left, int right) {
+	if (left < right) {
+		int p = partition(arr, left, right);
+		quickSortRec(arr, left, p - 1);
+		quickSortRec(arr, p + 1, right);
+	}
 }
 
 void quickSort(int arr[], int n) {
-    quickSortRec(arr, 0, n - 1);
+	quickSortRec(arr, 0, n - 1);
 }
