@@ -41,8 +41,7 @@ vector<int> findKClosestElements(int a[], int m, int k, int n) {
 
     vector<int> result;
     left++;
-    while (left < right)
-    {
+    while (left < right) {
         result.push_back(a[left]);
         left++;
     }
