@@ -2,7 +2,8 @@
 #include <vector>
 using namespace std;
 
-int binarySearch(int a[], int n, int m) {
+// modifikacija binarne pretrage
+int findInsertionPoint(int a[], int n, int m) {
     int low = 0;
     int high = n - 1;
     while (low <= high) {
@@ -22,7 +23,7 @@ int binarySearch(int a[], int n, int m) {
 }
 
 vector<int> findKClosestElements(int a[], int m, int k, int n) {
-    int i = binarySearch(a, n, m);
+    int i = findInsertionPoint(a, n, m);
 
     int left = i - 1;
     int right = i;

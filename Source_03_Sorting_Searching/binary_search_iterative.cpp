@@ -1,4 +1,4 @@
-int binarySearchIterative(int a[], int n, int x) {
+int binarySearch(int a[], int n, int x) {
     int l = 0, r = n - 1;
     while (l <= r) {
         int m = l + (r - l) / 2;
