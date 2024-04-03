@@ -1,5 +1,4 @@
-int binarySearchRec(int a[], int l, int r, int x)
-{
+int binarySearchRec(int a[], int l, int r, int x) {
     if (l > r) {
         return -1;
     }
