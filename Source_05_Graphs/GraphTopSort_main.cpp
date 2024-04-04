@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 
-#include "Source_05_Graphs/GraphTopSort.h"
+#include "GraphTopSort.h"
 
-int main() {
+int GraphTopSort_main() {
     int numNodes = 7;
     GraphTopSort graph(numNodes);
 
