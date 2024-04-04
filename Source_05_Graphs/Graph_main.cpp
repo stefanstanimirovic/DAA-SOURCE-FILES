@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 
-#include "Source_05_Graphs/Graph.h"
+#include "Graph.h"
 
-int main() {
+int graph_main() {
     int numNodes = 7;
     Graph graph(numNodes);
 
