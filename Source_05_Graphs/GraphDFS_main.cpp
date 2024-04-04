@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 
-#include "Source_05_Graphs/GraphDFS.h"
+#include "GraphDFS.h"
 
-int main() {
+int GraphDFS_main() {
     int numNodes = 7;
     GraphDFS graph(numNodes);
 
