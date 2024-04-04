@@ -1,6 +1,6 @@
 #include "GraphBFS.h"
 
-GraphBFS::GraphBFS(int n) : Graph(n), visited(n), dist(n), parent(n)
+GraphBFS::GraphBFS(int n) : GraphUndirected(n), visited(n), dist(n), parent(n)
 {}
 
 void GraphBFS::BFS(int startNode) {

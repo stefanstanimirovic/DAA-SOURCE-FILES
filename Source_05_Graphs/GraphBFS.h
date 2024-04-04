@@ -1,8 +1,9 @@
 #pragma once
-#include "Graph.h"
+#include "GraphUndirected.h"
 #include <queue>
 
-class GraphBFS : public Graph {
+class GraphBFS : public GraphUndirected 
+{
 protected:
     vector<bool> visited; // Markiranje posecenih cvorova
     vector<int> dist; // Rastojanja od startnog cvora

@@ -1,6 +1,6 @@
 #include "GraphDFS.h"
 
-GraphDFS::GraphDFS(int n) : Graph(n), visited(n) 
+GraphDFS::GraphDFS(int n) : GraphUndirected(n), visited(n) 
 {}
 
 void GraphDFS::DFSFromNode(int u){

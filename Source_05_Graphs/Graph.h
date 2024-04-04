@@ -9,8 +9,15 @@ protected:
     int numNodes; // Broj cvorova u grafu
     vector<vector<int>> adj; // Lista susedstva
 public:
-    Graph(int); // inicijalizacija grafa na zadati broj cvorova
-    void addEdge(int u, int v); // Dodavanje grane izmedju cvorova u i v
-    void display(); // Prikazivanje grafa
+    // Inicijalizacija grafa na zadati broj cvorova
+    Graph(int); 
+
+    // Metoda za dodavanje grane izmedju cvorova u i v
+    // Cisto virtuelna metoda koja ce drugacije biti implementirana
+    // za usmerene i neusmerene grafove
+    virtual void addEdge(int u, int v) = 0; 
+    
+    // Metoda za prikazivanje grafa
+    void display(); 
 };
 

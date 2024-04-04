@@ -1,11 +1,11 @@
 #include<iostream>
 using namespace std;
 
-#include "Graph.h"
+#include "GraphUndirected.h"
 
 int graph_main() {
     int numNodes = 7;
-    Graph graph(numNodes);
+    GraphUndirected graph(numNodes);
 
     // Dodvanje grana izmedju cvorova
     graph.addEdge(0, 1);

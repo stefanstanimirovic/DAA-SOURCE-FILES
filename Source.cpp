@@ -8,14 +8,14 @@ int main() {
     GraphTopSort graph(numNodes);
 
     // Dodvanje grana izmedju cvorova
-    graph.addEdgeDirected(0, 2);
-    graph.addEdgeDirected(1, 2);
-    graph.addEdgeDirected(1, 3);
-    graph.addEdgeDirected(2, 4);
-    graph.addEdgeDirected(2, 5);
-    graph.addEdgeDirected(2, 6);
-    graph.addEdgeDirected(3, 5);
-    graph.addEdgeDirected(6, 5);
+    graph.addEdge(0, 2);
+    graph.addEdge(1, 2);
+    graph.addEdge(1, 3);
+    graph.addEdge(2, 4);
+    graph.addEdge(2, 5);
+    graph.addEdge(2, 6);
+    graph.addEdge(3, 5);
+    graph.addEdge(6, 5);
 
     graph.TopSort();
 

@@ -1,12 +1,7 @@
 #include "GraphTopSort.h"
 
-GraphTopSort::GraphTopSort(int n) : Graph(n)
+GraphTopSort::GraphTopSort(int n) : GraphDirected(n)
 { }
-
-// Posebna metoda za dodavanje grane jer je graf usmeren
-void GraphTopSort::addEdgeDirected(int u, int v) {
-	adj[u].push_back(v);
-}
 
 // Topolosko sortiranje (vraca true/false u zavisnosti da li postoji)
 bool GraphTopSort::TopSort() {

@@ -1,6 +1,8 @@
 #pragma once
-#include "Graph.h"
-class GraphDFS : public Graph {
+#include "GraphUndirected.h"
+
+class GraphDFS : public GraphUndirected 
+{
 protected:
 	vector<bool> visited; // Markiranje posecenih cvorova
 public:
