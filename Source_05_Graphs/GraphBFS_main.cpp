@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 
-#include "Source_05_Graphs/GraphBFS.h"
+#include "GraphBFS.h"
 
-int main() {
+int GraphBFS_main() {
     int numNodes = 7;
     GraphBFS graph(numNodes);
 
