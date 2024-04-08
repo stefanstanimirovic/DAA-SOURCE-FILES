@@ -48,7 +48,7 @@ public:
     }
 };
 
-int main() {
+int Dijsktra_main() {
     int V = 6; // Broj cvorova grafa
     GraphDijkstra graph(V);
 
