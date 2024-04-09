@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <queue>
 #include <unordered_map>
 #include <string>
