@@ -2,7 +2,6 @@
 #include <queue>
 #include <unordered_map>
 #include <string>
-
 using namespace std;
 
 // Cvor Hafmanovog stabla
