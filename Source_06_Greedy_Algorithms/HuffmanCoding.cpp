@@ -3,7 +3,6 @@
 #include <unordered_map>
 #include <string>
 using namespace std;
-
 // Cvor Hafmanovog stabla
 struct Node {
     char data;
@@ -47,7 +46,7 @@ Node* buildHuffmanTree(string text) {
         pq.push(new Node(pair.first, pair.second));
     }
 
-    // Hafmanov algoritam
+    // Hafmanov postupak
     while (pq.size() != 1) {
         Node* left = pq.top(); pq.pop();
         Node* right = pq.top(); pq.pop();
@@ -59,11 +58,11 @@ Node* buildHuffmanTree(string text) {
         pq.push(newNode);
     }
 
-    // Reultat je koren Hafmanovog stabla
+    // Rezultat je koren Hafmanovog stabla
     return pq.top();
 }
 
-// Glavna funkcija za kreriranje Hafmanovog stabla i dodeljivanje kodnih reci
+// Glavna funkcija za kreiranje Hafmanovog stabla i dodeljivanje kodnih reci
 unordered_map<char, string> buildHuffmanCodes(string text) {
     unordered_map<char, string> huffmanCode;
     Node* root = buildHuffmanTree(text);
