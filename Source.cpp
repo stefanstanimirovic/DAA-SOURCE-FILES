@@ -1,12 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void egyptianFraction(int m, int n);
+int numberOfGrades1(int a[], int n);
 
 int main() {
-    int numerator, denominator;
-    cin >> numerator >> denominator;
-    cout << numerator << "/" << denominator << " = ";
-    egyptianFraction(numerator, denominator);
+    int a[] = { 5, 4, 4, 3, 3 };
+    int n = sizeof(a) / sizeof(a[0]);
+    cout << numberOfGrades1(a, n);
     return 0;
 }
