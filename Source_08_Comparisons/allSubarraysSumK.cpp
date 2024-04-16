@@ -1,11 +1,12 @@
 #include <vector>
+#include <iostream>
 using namespace std;
 
 void display(const vector<int>& v) {
 	for (int i = 0; i < v.size(); ++i) {
-		printf("%d ", v[i]);
+		cout << v[i] << " ";
 	}
-	printf("\n");
+	cout << endl;
 }
 
 void printSubsetsRec(int arr[], int i, int k, vector<int>& p, vector<vector<bool>> dp) {
