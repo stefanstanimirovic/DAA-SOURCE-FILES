@@ -3,13 +3,12 @@
 using namespace std;
 
 void sumSubsets(int set[], int size, int n, int k) {
-	// Create the new array with size
-	// equal to array set[] to create
-	// binary array as per n(decimal number)
+	// Kreiramo dinamicki niz duzine size koji 
+	// predstavlja binarni zapis broja n 
 	vector<int> x(size);
 	int j = size - 1;
 
-	// Convert the array into binary array
+	// Konverzija broja n u binarni niz
 	while (n > 0) {
 		x[j] = n % 2;
 		n = n / 2;
@@ -17,15 +16,15 @@ void sumSubsets(int set[], int size, int n, int k) {
 	}
 
 	int sum = 0;
-	// Calculate the sum of this subset
+	// Racunamo sumu elemenata podniza cija je
+	// funkcija podskupa zadata maskom x
 	for (int i = 0; i < size; i++) {
 		if (x[i] == 1) {
 			sum = sum + set[i];
 		}
 	}
 
-	// Check whether sum is equal to k
-	// if it is equal, then print the subset
+	// Ukoliko je suma jednaka k, stampamo podniz
 	if (sum == k) {
 		for (int i = 0; i < size; ++i) {
 			if (x[i] == 1) {
@@ -36,13 +35,13 @@ void sumSubsets(int set[], int size, int n, int k) {
 	}
 }
 
-// Function to find the subsets with sum k
+// Funkcija koja nalazi sve podnizove sa sumom k
 void findSubsets(int arr[], int n, int k) {
-	// Calculate the total no. of subsets
+	// Ukupan broj podskupova
 	int x = pow(2, n);
 
-	// Run loop till total no. of subsets
-	// and call the function for each subset
+	// Petlja po broju svih podskupova
+	// Za svaki podskup se pozove prethodna funkcija
 	for (int i = 1; i < x; i++) {
 		sumSubsets(arr, n, i, k);
 	}
