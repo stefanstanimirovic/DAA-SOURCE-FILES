@@ -8,14 +8,9 @@ long power2(int a, int n, int m) {
     }
 
     // Rekurzivna formula
-    long y;
+    long temp = power2(a, n / 2, m);
     if (n % 2 == 0) {
-        y = power2(a, n / 2, m);
-        y = (y * y) % m;
+        return (temp * temp) % m;
     }
-    else {
-        y = a % m;
-        y = (y * power2(a, n - 1, m)) % m;
-    }
-    return y;
+    return (((a % m) * temp) % m * temp) % m;
 }
