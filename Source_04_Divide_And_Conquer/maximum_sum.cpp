@@ -7,7 +7,7 @@ int maximum_sum(int a[], int low, int high) {
         return a[low];
     }
 
-    int mid = (low + high) / 2;
+    int mid = low + (high - low) / 2;
 
     // Nadji maksimalnu sumu za levi podniz
     int left_max = INT_MIN;
