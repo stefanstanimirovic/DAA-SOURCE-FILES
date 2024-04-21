@@ -12,5 +12,5 @@ long power2(int a, int n, int m) {
     if (n % 2 == 0) {
         return (temp * temp) % m;
     }
-    return (((a % m) * temp) % m * temp) % m;
+    return ((((a % m) * temp) % m) * temp) % m;
 }
