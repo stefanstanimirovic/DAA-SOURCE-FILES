@@ -1,4 +1,4 @@
-int brojKruzniNiz(int n, int a[]) {
+int findRotationCount(int n, int a[]) {
     int l = 0, r = n - 1;
 
     while (l <= r) {
