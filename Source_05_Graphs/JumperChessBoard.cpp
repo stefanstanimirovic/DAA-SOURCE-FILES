@@ -33,7 +33,8 @@ public:
     }
 
     int shortestPath() {
-        if (board[xS][yS] == 'X' || board[xE][yE] == 'X') {
+        if (xS == -1 || yS == -1 || xE == -1 || yE == -1
+            || board[xS][yS] == 'X' || board[xE][yE] == 'X') {
             return -1;
         }
 
