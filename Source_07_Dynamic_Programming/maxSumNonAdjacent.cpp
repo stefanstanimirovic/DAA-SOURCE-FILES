@@ -13,18 +13,14 @@ int maxSumNonAdjacent(int n, int a[]) {
 	}
 
 	//Ispis elemenata koji su usli u sumu:
-	int i = n - 1;
-	while (i >= 0) {
-		if (i != 0 && d[i + 1] == d[i - 1] + a[i]) {
-			cout << a[i] << " ";
+	int i = n;
+	while (i > 0) {
+		if (d[i] != d[i - 1]) {
+			cout << a[i - 1] << " ";
 			i = i - 2;
-		}
-		else if (i != 0) {
-			i = i - 1;
 		}
 		else {
-			cout << a[i] << " ";
-			i = i - 2;
+			i = i - 1;
 		}
 	}
 	cout << endl;
