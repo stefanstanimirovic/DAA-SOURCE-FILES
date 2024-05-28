@@ -1,5 +1,3 @@
-// uncomment the code below to run main function
-/*
 #pragma once
 #include <vector>
 #include <iostream>
@@ -15,7 +13,7 @@ void printArray(int arr[], int arrSize) {
     cout << endl;
 }
 
-int main() {
+int MergeSortMain() {
     int arr[] = { 12, 11, 13, 5, 6, 7, 15, 3, 8, 14, 4 };
     int arrSize = sizeof(arr) / sizeof(arr[0]);
 
@@ -29,4 +27,3 @@ int main() {
 
     return 0;
 }
-*/

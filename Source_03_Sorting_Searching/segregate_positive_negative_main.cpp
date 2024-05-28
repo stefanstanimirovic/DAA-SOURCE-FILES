@@ -1,4 +1,3 @@
-/*
 #pragma once
 #include <iostream>
 using namespace std;
@@ -8,7 +7,7 @@ void partitionQuick(int a[], int n);
 void partitionMerge(int arr[], int low, int high);
 
 
-int main() {
+int PartitionMain() {
     int a[] = { 9, -3, 5, -2, -8, -6, 1, 3 };
     int n = sizeof(a) / sizeof(a[0]);
 
@@ -22,4 +21,3 @@ int main() {
 
     return 0;
 }
-*/
