@@ -3,15 +3,12 @@
 using namespace std;
 
 int longestCommonSubsequence(double a[], double b[], int n, int m) {
-    vector<vector<int>> L(m + 1, vector<int>(n + 1));
+    vector<vector<int>> L(n + 1, vector<int>(m + 1, 0));
 
-    for (int i = 0; i <= n; i++) {
-        for (int j = 0; j <= m; j++) {
-            if (i == 0 || j == 0) {
-                L[i][j] = 0;
-            }
-            else if (a[i - 1] == b[j - 1]) {
-                L[i][j] = L[i - 1][j - 1] + 1;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= m; j++) {
+            if (a[i - 1] == b[j - 1]) {
+                L[i][j] = 1 + L[i - 1][j - 1];
             }
             else {
                 L[i][j] = max(L[i - 1][j], L[i][j - 1]);
@@ -19,10 +16,10 @@ int longestCommonSubsequence(double a[], double b[], int n, int m) {
         }
     }
 
-    int index = L[m][n];
+    int index = L[n][m];
     vector<int> subsequence(index);
 
-    int i = m, j = n;
+    int i = n, j = m;
     while (i > 0 && j > 0) {
         if (a[i - 1] == b[j - 1]) {
             subsequence[--index] = a[i - 1];
