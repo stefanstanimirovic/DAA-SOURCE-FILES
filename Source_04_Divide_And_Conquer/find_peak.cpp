@@ -12,7 +12,7 @@ int findPeak(int arr[], int n) {
     while (l <= r) {
         mid = l + (r - l) / 2;
         if (arr[mid - 1] < arr[mid] && arr[mid + 1] < arr[mid]) {
-            return mid;
+            return a[mid];
         }
         if (arr[mid - 1] > arr[mid]) {
             r = mid - 1;
